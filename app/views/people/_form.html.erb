@@ -1,0 +1,19 @@
+<%= form_with(model: @person, local: true, class: "ui form") do |f| %>
+  <div class = "field">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, placeholder: "Full Name"%>
+  </div>
+  <br>
+  <div class = "field">
+    <%= f.label :avatar %>
+    <%= f.text_field :avatar, required: true, placeholder: "Avatar" %>
+  </div>
+  <br>
+  <div class = "field">
+    <%= f.label :email %>
+    <%= f.text_field :email, required: true, placeholder: "Email" %>
+  </div>
+  <br>
+  <button class= "ui primary button" type="submit"> Submit </button>
+  <%# <%= link_to "Cancel", person_path(@person.id)%>
+<%end%>
